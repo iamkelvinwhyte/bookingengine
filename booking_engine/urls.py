@@ -21,7 +21,7 @@ from listings import api_views as webapp_api_views
 urlpatterns = [
     path('admin/', admin.site.urls),
 
-    # Vacancies
+    # ReservationList
     path('api/v1/units', webapp_api_views.ReservationList.as_view(),
          name='ReservationList')
 ]

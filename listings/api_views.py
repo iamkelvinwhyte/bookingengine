@@ -1,6 +1,5 @@
 
 from datetime import timezone
-from logging import error
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
@@ -17,7 +16,7 @@ class ReservationList(APIView):
         serializer_data = SelfValidationSerializer(
             data=request.query_params)
         if not serializer_data.is_valid():
-            return Response(serializer_data.errors, status=status.HTTP_404_NOT_FOUND)
+            return Response(serializer_data.errors, status=status.HTTP_406_NOT_ACCEPTABLE)
 
         data = []
 

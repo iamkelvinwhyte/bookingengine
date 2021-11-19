@@ -1,6 +1,5 @@
 from rest_framework import serializers
 
-from django.contrib.auth.models import User        # From the Admin database
 from .models import BookingInfo, Reservation, Listing
 from django.core.exceptions import ValidationError
 
